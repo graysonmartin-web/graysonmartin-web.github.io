@@ -1,29 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Grayson Martin</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – Grayson Martin</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Grayson Martin</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container nav">
+      <div class="brand"><a href="index.html">Grayson Martin</a></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>Projects</h2>
-    <p>Here are some of my projects...</p>
+  <main class="container">
+    <section>
+      <h2>Projects</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <img src="images/backward-step.png" alt="Backward step" />
+          <h3>Backward Step (Turbulent)</h3>
+          <p>RANS k-ε; Re = 5k–50k; recirculation length; mesh/y⁺ study.</p>
+          <!-- <p><a class="button secondary" href="docs/backward-step.pdf">Report</a></p> -->
+        </article>
+        <article class="card">
+          <img src="images/hex.png" alt="Heat exchanger CFD" />
+          <h3>Heat Exchanger CFD</h3>
+          <p>Conjugate HT; ε–Δp Pareto; fin pitch sweep.</p>
+        </article>
+        <article class="card">
+          <img src="images/boundary-layer.png" alt="Boundary layer" />
+          <h3>Boundary Layer Tooling</h3>
+          <p>MATLAB post-proc; u/U∞ vs y/δ; comparison to theory.</p>
+          <!-- <p><a class="button secondary" href="https://github.com/yourrepo">Code</a></p> -->
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 Grayson Martin</p>
+    <div class="container">© 2025 Grayson Martin • CFD Portfolio</div>
   </footer>
 </body>
 </html>
