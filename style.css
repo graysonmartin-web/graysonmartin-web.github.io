@@ -95,3 +95,21 @@ pre{
   .nav{justify-content:space-between}
   nav{display:flex; gap:8px}
 }
+/* ---- Projects grid + filters ---- */
+.filters { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 18px }
+.filter-btn{
+  padding:8px 12px; border:1px solid #2a3a63; border-radius:999px;
+  background:#0f1730; color:var(--muted); cursor:pointer; font-weight:600;
+  transition:transform .18s ease, background .18s ease, color .18s ease;
+}
+.filter-btn:hover{ transform:translateY(-1px); background:#152248; color:var(--text) }
+.filter-btn.active{ background:var(--accent); color:#001018; border-color:transparent }
+
+.project-card{ transition:opacity .18s ease, transform .18s ease }
+.project-card.hide{ opacity:0; transform:scale(.98); pointer-events:none }
+
+.tag{
+  display:inline-block; padding:4px 8px; border:1px solid #2a3a63;
+  border-radius:999px; font-size:.78rem; color:var(--muted); margin:6px 6px 0 0;
+}
+
