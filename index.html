@@ -1,29 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grayson Martin - CFD Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grayson Martin – CFD Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Grayson Martin</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container nav">
+      <div class="brand"><a href="index.html">Grayson Martin</a></div>
+      <nav>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>Welcome</h2>
-    <p>This site showcases my CFD projects, research, and skills.</p>
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Computational Fluid Dynamics Portfolio</h1>
+        <p class="lead">
+          I’m Grayson Martin (UTK ME). I explore fluid mechanics problems using
+          COMSOL, ANSYS Fluent, and custom MATLAB/Python post-processing.
+        </p>
+        <div class="cta">
+          <a class="button" href="projects.html">View Projects</a>
+          <a class="button secondary" href="about.html">About Me</a>
+        </div>
+      </div>
+      <div class="panel">
+        <img src="images/hero-cfd.png" alt="CFD visualization" />
+      </div>
+    </section>
+
+    <section>
+      <h2>Highlights</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <span class="badge">RANS k-ε</span>
+          <h3>Backward-Step Turbulence</h3>
+          <p>Recirculation length vs Re; mesh independence & y⁺ checks.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Conjugate HT</span>
+          <h3>Heat-Exchanger Optimization</h3>
+          <p>Effectiveness vs Δp tradeoffs; fin spacing sweep.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Post-proc</span>
+          <h3>Boundary Layer Profiles</h3>
+          <p>MATLAB tools for u/U∞ vs y/δ; Blasius/log-law comparison.</p>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 Grayson Martin</p>
+    <div class="container">© 2025 Grayson Martin • CFD Portfolio</div>
   </footer>
 </body>
 </html>
