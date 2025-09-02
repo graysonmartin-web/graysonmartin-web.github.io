@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Grayson Martin</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Grayson Martin</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Grayson Martin</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container nav">
+      <div class="brand"><a href="index.html">Grayson Martin</a></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>About Me</h2>
-    <p>I am a Mechanical Engineering student specializing in CFD...</p>
+  <main class="container">
+    <section class="panel" style="padding:22px">
+      <h2>About</h2>
+      <p>Mechanical Engineering (UTK ’26). Interests: CFD, heat transfer, turbulence modeling,
+         mesh strategy, verification & validation.</p>
+      <p><strong>Tools:</strong> COMSOL, ANSYS Fluent, MATLAB, Python (NumPy/Matplotlib), SolidWorks.</p>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 Grayson Martin</p>
+    <div class="container">© 2025 Grayson Martin • CFD Portfolio</div>
   </footer>
 </body>
 </html>
