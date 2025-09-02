@@ -1,0 +1,97 @@
+/* ---------- Base ---------- */
+:root{
+  --bg:#0b1220;
+  --panel:#121a2a;
+  --text:#e7eefc;
+  --muted:#a8b3cf;
+  --accent:#4cc9f0;      /* cyan-blue accent */
+  --accent-2:#b5179e;    /* magenta for hovers */
+  --radius:16px;
+  --maxw:1080px;
+  --shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
+  color:var(--text);
+  background:radial-gradient(1200px 600px at 80% -10%,#17223a,transparent) , var(--bg);
+}
+
+/* ---------- Layout ---------- */
+.container{max-width:var(--maxw); margin:auto; padding:0 20px}
+section{padding:56px 0}
+.panel{
+  background:linear-gradient(180deg,#0f1730, #0b1326);
+  border:1px solid #1f2a45;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+/* ---------- Header / Nav ---------- */
+header{
+  position:sticky; top:0; z-index:1000;
+  background:rgba(10,16,30,.85); backdrop-filter:saturate(140%) blur(6px);
+  border-bottom:1px solid #1b2743;
+}
+.nav{
+  display:flex; align-items:center; gap:18px; height:64px;
+}
+.brand{font-weight:700; letter-spacing:.3px}
+.brand a{color:var(--text); text-decoration:none}
+nav a{
+  color:var(--muted); text-decoration:none; padding:8px 10px; border-radius:10px;
+}
+nav a:hover, nav a[aria-current="page"]{
+  color:var(--text); background:#1a2540;
+}
+
+/* ---------- Hero ---------- */
+.hero{display:grid; gap:18px; grid-template-columns:1.2fr .8fr; align-items:center}
+.hero h1{font-size:2.4rem; line-height:1.1; margin:0 0 12px}
+.lead{color:var(--muted); margin:0 0 20px}
+.cta{display:flex; gap:12px; flex-wrap:wrap}
+.button{
+  display:inline-block; padding:12px 18px; border-radius:12px;
+  text-decoration:none; color:#001018; background:var(--accent); font-weight:700;
+}
+.button.secondary{background:#1a2540; color:var(--text); border:1px solid #334368}
+.button:hover{transform:translateY(-1px); filter:brightness(1.06)}
+
+/* ---------- Grids / Cards ---------- */
+.grid{display:grid; gap:18px}
+.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.card{
+  background:var(--panel); border:1px solid #1f2a45; border-radius:var(--radius); padding:18px;
+  box-shadow:var(--shadow);
+}
+.card h3{margin:8px 0 6px}
+.badge{display:inline-block; padding:4px 8px; border-radius:999px; font-size:.8rem; color:#002030; background:var(--accent); margin-right:6px}
+
+/* ---------- Media ---------- */
+img,video{max-width:100%; border-radius:12px; border:1px solid #1f2a45}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid #1b2743; color:var(--muted); padding:24px 0; text-align:center}
+
+/* ---------- Code / Pre ---------- */
+pre,code{font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+pre{
+  background:#0e172b; border:1px solid #1f2a45; padding:14px; border-radius:12px; overflow:auto
+}
+
+/* ---------- Forms (for email link reveal later) ---------- */
+.inline-icons a{color:var(--muted); text-decoration:none; margin-right:14px}
+.inline-icons a:hover{color:var(--accent-2)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .grid.cols-3{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .grid.cols-3{grid-template-columns:1fr}
+  .nav{justify-content:space-between}
+  nav{display:flex; gap:8px}
+}
