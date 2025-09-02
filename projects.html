@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects – Grayson Martin</title>
+  <meta name="description" content="CFD projects: COMSOL, ANSYS Fluent, MATLAB/Python post-processing." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -22,30 +23,55 @@
   <main class="container">
     <section>
       <h2>Projects</h2>
-      <div class="grid cols-3">
-        <article class="card">
-          <img src="images/backward-step.png" alt="Backward step" />
+      <!-- Filters -->
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="*">All</button>
+        <button class="filter-btn" data-filter="COMSOL">COMSOL</button>
+        <button class="filter-btn" data-filter="Fluent">Fluent</button>
+        <button class="filter-btn" data-filter="MATLAB">MATLAB</button>
+        <button class="filter-btn" data-filter="Python">Python</button>
+        <button class="filter-btn" data-filter="CHT">CHT</button>
+        <button class="filter-btn" data-filter="Turbulence">Turbulence</button>
+      </div>
+
+      <!-- Cards -->
+      <div class="grid cols-3" id="projectGrid">
+        <article class="card project-card" data-tags="Fluent Turbulence">
+          <img src="images/backward-step.png" alt="Backward step">
           <h3>Backward Step (Turbulent)</h3>
-          <p>RANS k-ε; Re = 5k–50k; recirculation length; mesh/y⁺ study.</p>
-          <!-- <p><a class="button secondary" href="docs/backward-step.pdf">Report</a></p> -->
+          <p>RANS k-ε; Re 5k–50k. Recirculation length; mesh & y⁺ study.</p>
+          <div>
+            <span class="tag">Fluent</span><span class="tag">Turbulence</span>
+          </div>
         </article>
-        <article class="card">
-          <img src="images/hex.png" alt="Heat exchanger CFD" />
-          <h3>Heat Exchanger CFD</h3>
-          <p>Conjugate HT; ε–Δp Pareto; fin pitch sweep.</p>
+
+        <article class="card project-card" data-tags="COMSOL CHT">
+          <img src="images/hex.png" alt="Heat Exchanger CHT">
+          <h3>Heat Exchanger – Conjugate HT</h3>
+          <p>ε–Δp tradeoffs; fin spacing sweep; solid-fluid coupling.</p>
+          <div>
+            <span class="tag">COMSOL</span><span class="tag">CHT</span>
+          </div>
         </article>
-        <article class="card">
-          <img src="images/boundary-layer.png" alt="Boundary layer" />
+
+        <article class="card project-card" data-tags="MATLAB Python">
+          <img src="images/boundary-layer.png" alt="Boundary layer tooling">
           <h3>Boundary Layer Tooling</h3>
-          <p>MATLAB post-proc; u/U∞ vs y/δ; comparison to theory.</p>
-          <!-- <p><a class="button secondary" href="https://github.com/yourrepo">Code</a></p> -->
+          <p>MATLAB/Python post-proc; u/U∞ vs y/δ; Blasius & log-law checks.</p>
+          <div>
+            <span class="tag">MATLAB</span><span class="tag">Python</span>
+          </div>
         </article>
+
+        <!-- Add more cards as you build projects -->
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">© 2025 Grayson Martin • CFD Portfolio</div>
+    <div class="container">© <span id="year">2025</span> Grayson Martin • CFD Portfolio. All rights reserved.</div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
